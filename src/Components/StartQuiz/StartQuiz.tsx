@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StartQuizProps } from "../../Types/types";
 
 const StartQuiz = ({ start }: StartQuizProps) => {

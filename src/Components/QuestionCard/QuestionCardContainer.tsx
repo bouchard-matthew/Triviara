@@ -1,6 +1,6 @@
 import React from "react";
 import { useStore } from "../../Context/useAppStore";
-import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
+import QuestionCard from "./QuestionCard";
 
 const QuestionCardContainer = () => {
   const {
@@ -11,8 +11,6 @@ const QuestionCardContainer = () => {
     score,
     setScore,
     setUserAnswers,
-    totalQuestions,
-    userAnswers,
   } = useStore();
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -35,38 +33,7 @@ const QuestionCardContainer = () => {
   };
 
   return (
-    <>
-      {!gameOver && !loading && (
-        <Wrapper>
-          <p className="number">
-            Question: {number + 1} / {totalQuestions}
-          </p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: questions[number].question,
-            }}
-          />
-          <div>
-            {questions[number].answers.map((answer) => (
-              <ButtonWrapper
-                key={answer}
-                correct={userAnswers[number]?.correctAnswer === answer}
-                userClicked={userAnswers[number]?.answer === answer}
-              >
-                <button
-                  disabled={userAnswers[number] ? true : false}
-                  value={answer}
-                  onClick={checkAnswer}
-                >
-                  <span dangerouslySetInnerHTML={{ __html: answer }} />
-                </button>
-              </ButtonWrapper>
-            ))}
-          </div>
-        </Wrapper>
-        // <QuestionCard callback={callback} />
-      )}
-    </>
+    <>{!gameOver && !loading && <QuestionCard callback={checkAnswer} />}</>
   );
 };
 
