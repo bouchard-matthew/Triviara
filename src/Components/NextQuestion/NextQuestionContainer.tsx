@@ -1,6 +1,6 @@
 import React from "react";
-import { NextQuestion } from ".";
 import { useStore } from "../../Context/useAppStore";
+import NextQuestion from "./NextQuestion";
 
 const NextQuestionContainer = () => {
   const {
@@ -27,12 +27,7 @@ const NextQuestionContainer = () => {
       {!gameOver &&
         !loading &&
         userAnswers.length === number + 1 &&
-        number !== totalQuestions - 1 && (
-          <button onClick={next} className="next">
-            Next Question
-          </button>
-          // <NextQuestion next={next} />
-        )}
+        number !== totalQuestions - 1 && <NextQuestion next={next} />}
     </>
   );
 };
