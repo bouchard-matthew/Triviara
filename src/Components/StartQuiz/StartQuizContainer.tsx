@@ -2,7 +2,7 @@ import React from "react";
 import { useStore } from "../../Context/useAppStore";
 import { QuestionState } from "../../Types/types";
 import { fetchQuizQuestions } from "../../Utils/utils";
-import StartQuiz from "./StartQuiz";
+import StartQuiz from './StartQuiz';
 
 const StartQuizContainer = () => {
   const {
@@ -40,9 +40,7 @@ const StartQuizContainer = () => {
     <>
       <h1>Triviara</h1>
       {!loading && (gameOver || userAnswers.length === totalQuestions) ? (
-        <>
-          <StartQuiz start={start} />
-        </>
+        <StartQuiz start={start} />
       ) : null}
       {!gameOver && <p className="score">Score: {score}</p>}
     </>
