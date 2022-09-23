@@ -1,3 +1,5 @@
+import { StoreState } from "../Context/useAppStore";
+
 export enum Difficulty {
   EASY = "easy",
   MEDIUM = "medium",
@@ -27,14 +29,28 @@ export type ButtonWrapperProps = {
   userClicked: boolean;
 };
 
-export type NextQuestionProps = {
+export interface NextQuestionProps
+  extends Pick<
+    StoreState,
+    "loading" | "gameOver" | "number" | "totalQuestions"
+  > {
   next: () => void;
-};
+}
 
-export type QuestionCardProps = {
+export interface QuestionCardProps
+  extends Pick<StoreState, "loading" | "gameOver"> {
   callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-};
+}
 
-export type StartQuizProps = {
+export interface StartQuizProps
+  extends Pick<
+    StoreState,
+    | "loading"
+    | "setDifficulty"
+    | "gameOver"
+    | "userAnswers"
+    | "totalQuestions"
+    | "score"
+  > {
   start: () => void;
-};
+}

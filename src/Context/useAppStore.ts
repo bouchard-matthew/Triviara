@@ -1,7 +1,7 @@
 import create from "zustand";
 import { AnswerObject, Difficulty, QuestionState } from "../Types/types";
 
-type StoreState = {
+export type StoreState = {
   loading: boolean;
   setLoading: (value: boolean) => void;
   questions: QuestionState[];

@@ -11,6 +11,7 @@ const StartQuizContainer = () => {
     gameOver,
     loading,
     score,
+    setDifficulty,
     setGameOver,
     setLoading,
     setNumber,
@@ -37,15 +38,15 @@ const StartQuizContainer = () => {
   };
 
   return (
-    <>
-      <h1>Triviara</h1>
-      {!loading && (gameOver || userAnswers.length === totalQuestions) ? (
-        <>
-          <StartQuiz start={start} />
-        </>
-      ) : null}
-      {!gameOver && <p className="score">Score: {score}</p>}
-    </>
+    <StartQuiz
+      start={start}
+      loading={loading}
+      setDifficulty={setDifficulty}
+      gameOver={gameOver}
+      userAnswers={userAnswers}
+      totalQuestions={totalQuestions}
+      score={score}
+    />
   );
 };
 

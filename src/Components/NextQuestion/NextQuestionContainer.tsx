@@ -3,15 +3,8 @@ import { useStore } from "../../Context/useAppStore";
 import NextQuestion from "./NextQuestion";
 
 const NextQuestionContainer = () => {
-  const {
-    gameOver,
-    loading,
-    number,
-    setGameOver,
-    setNumber,
-    totalQuestions,
-    userAnswers,
-  } = useStore();
+  const { gameOver, loading, number, setGameOver, setNumber, totalQuestions } =
+    useStore();
 
   const next = () => {
     const nextQuestion = number + 1;
@@ -24,10 +17,13 @@ const NextQuestionContainer = () => {
 
   return (
     <>
-      {!gameOver &&
-        !loading &&
-        userAnswers.length === number + 1 &&
-        number !== totalQuestions - 1 && <NextQuestion next={next} />}
+      <NextQuestion
+        next={next}
+        gameOver={gameOver}
+        loading={loading}
+        number={number}
+        totalQuestions={totalQuestions}
+      />
     </>
   );
 };

@@ -33,7 +33,13 @@ const QuestionCardContainer = () => {
   };
 
   return (
-    <>{!gameOver && !loading && <QuestionCard callback={checkAnswer} />}</>
+    <>
+      <QuestionCard
+        callback={checkAnswer}
+        gameOver={gameOver}
+        loading={loading}
+      />
+    </>
   );
 };
 

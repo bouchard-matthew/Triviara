@@ -1,11 +1,21 @@
 import React from "react";
 import { NextQuestionProps } from "../../Types/types";
 
-const NextQuestion = ({ next }: NextQuestionProps) => {
+const NextQuestion = ({
+  next,
+  gameOver,
+  loading,
+  number,
+  totalQuestions,
+}: NextQuestionProps) => {
   return (
-    <button onClick={next} className="next">
-      Next Question
-    </button>
+    <>
+      {!gameOver && !loading && number !== totalQuestions - 1 && (
+        <button onClick={next} className="next">
+          Next Question
+        </button>
+      )}
+    </>
   );
 };
 
