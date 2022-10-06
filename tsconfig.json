@@ -18,5 +18,5 @@
     "target": "es2019",
     "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "./jest-setup.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
