@@ -18,7 +18,10 @@ const StartQuiz = ({
         {Object.entries(Difficulty).map(([key, value], idx) => {
           return (
             <button
-              onClick={() => setDifficulty(value)}
+              onClick={() => {
+                setDifficulty(value);
+                console.log(value);
+              }}
               key={idx}
               value={value}
               disabled={!gameOver}
