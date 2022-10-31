@@ -1,5 +1,4 @@
 import { Difficulty, Question, QuestionState } from "../Types/types";
-import { Buffer } from "buffer";
 
 export const shuffleArray = (array: any[]) =>
   [...array].sort(() => Math.random() - 0.5);
