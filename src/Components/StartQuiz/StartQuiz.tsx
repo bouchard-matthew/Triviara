@@ -4,6 +4,7 @@ import { StartQuizProps, Difficulty } from "../../Types/types";
 const StartQuiz = ({
   start,
   setDifficulty,
+  difficulty,
   gameOver,
   loading,
   userAnswers,
@@ -18,10 +19,14 @@ const StartQuiz = ({
         {Object.entries(Difficulty).map(([key, value], idx) => {
           return (
             <button
-              onClick={() => {
-                setDifficulty(value);
-                console.log(value);
-              }}
+              className={
+                gameOver
+                  ? difficulty == value
+                    ? `selected-${value} difficulty-${value}`
+                    : `difficulty-${value}`
+                  : "disabled"
+              }
+              onClick={() => setDifficulty(value)}
               key={idx}
               value={value}
               disabled={!gameOver}

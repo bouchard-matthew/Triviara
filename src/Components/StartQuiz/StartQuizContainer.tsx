@@ -39,6 +39,7 @@ const StartQuizContainer = () => {
 
   return (
     <StartQuiz
+      difficulty={difficulty}
       start={start}
       loading={loading}
       setDifficulty={setDifficulty}

@@ -38,7 +38,15 @@ export interface NextQuestionProps
 }
 
 export interface QuestionCardProps
-  extends Pick<StoreState, "loading" | "gameOver"> {
+  extends Pick<
+    StoreState,
+    | "loading"
+    | "gameOver"
+    | "number"
+    | "totalQuestions"
+    | "questions"
+    | "userAnswers"
+  > {
   callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -47,6 +55,7 @@ export interface StartQuizProps
     StoreState,
     | "loading"
     | "setDifficulty"
+    | "difficulty"
     | "gameOver"
     | "userAnswers"
     | "totalQuestions"

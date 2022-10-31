@@ -8,9 +8,11 @@ const QuestionCardContainer = () => {
     loading,
     number,
     questions,
+    totalQuestions,
     score,
     setScore,
     setUserAnswers,
+    userAnswers,
   } = useStore();
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -35,6 +37,10 @@ const QuestionCardContainer = () => {
   return (
     <>
       <QuestionCard
+        number={number}
+        totalQuestions={totalQuestions}
+        questions={questions}
+        userAnswers={userAnswers}
         callback={checkAnswer}
         gameOver={gameOver}
         loading={loading}

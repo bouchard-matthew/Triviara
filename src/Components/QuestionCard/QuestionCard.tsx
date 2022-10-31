@@ -3,21 +3,28 @@ import { useStore } from "../../Context/useAppStore";
 import { QuestionCardProps } from "../../Types/types";
 import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
 
-const QuestionCard = ({ callback, gameOver, loading }: QuestionCardProps) => {
-  const { number, totalQuestions, questions, userAnswers } = useStore();
+const QuestionCard = ({
+  callback,
+  gameOver,
+  loading,
+  number,
+  totalQuestions,
+  questions,
+  userAnswers,
+}: QuestionCardProps) => {
   return (
     <>
-      {" "}
       {!gameOver && !loading && (
-        <Wrapper>
-          <p className="number">
+        <Wrapper data-testid="wrapper">
+          <p className="number" data-testid="question-text">
             Question: {number + 1} / {totalQuestions}
           </p>
           <p
             dangerouslySetInnerHTML={{
-              __html: questions[number].question,
+              __html: `${questions[number].question}`,
             }}
           />
+
           <div>
             {questions[number].answers.map((answer) => (
               <ButtonWrapper
@@ -30,7 +37,7 @@ const QuestionCard = ({ callback, gameOver, loading }: QuestionCardProps) => {
                   value={answer}
                   onClick={callback}
                 >
-                  <span dangerouslySetInnerHTML={{ __html: answer }} />
+                  <span>{answer}</span>
                 </button>
               </ButtonWrapper>
             ))}
