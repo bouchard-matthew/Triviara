@@ -7,11 +7,12 @@ const NextQuestion = ({
   loading,
   number,
   totalQuestions,
+  disabled,
 }: NextQuestionProps) => {
   return (
     <>
       {!gameOver && !loading && number !== totalQuestions - 1 && (
-        <button onClick={next} className="next">
+        <button onClick={next} disabled={disabled} className="next">
           Next Question
         </button>
       )}
