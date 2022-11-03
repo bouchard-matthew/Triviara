@@ -9,6 +9,7 @@ describe("NextQuestion", () => {
     loading: false,
     totalQuestions: 0,
     number: 0,
+    disabled: false,
   };
 
   test("Should Render Next Question Button", () => {

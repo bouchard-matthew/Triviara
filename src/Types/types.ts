@@ -35,6 +35,7 @@ export interface NextQuestionProps
     "loading" | "gameOver" | "number" | "totalQuestions"
   > {
   next: () => void;
+  disabled: boolean;
 }
 
 export interface QuestionCardProps

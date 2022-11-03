@@ -37,7 +37,7 @@ const QuestionCard = ({
                   value={answer}
                   onClick={callback}
                 >
-                  <span>{answer}</span>
+                  <span dangerouslySetInnerHTML={{ __html: answer }} />
                 </button>
               </ButtonWrapper>
             ))}
