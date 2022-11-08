@@ -1,5 +1,14 @@
 import React from "react";
-import { NextQuestionProps } from "../../Types/types";
+import { StoreState } from "../../Context/useAppStore";
+
+interface NextQuestionProps
+  extends Pick<
+    StoreState,
+    "loading" | "gameOver" | "number" | "totalQuestions"
+  > {
+  next: () => void;
+  disabled: boolean;
+}
 
 const NextQuestion = ({
   next,
