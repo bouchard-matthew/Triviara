@@ -28,39 +28,3 @@ export type ButtonWrapperProps = {
   correct: boolean;
   userClicked: boolean;
 };
-
-export interface NextQuestionProps
-  extends Pick<
-    StoreState,
-    "loading" | "gameOver" | "number" | "totalQuestions"
-  > {
-  next: () => void;
-  disabled: boolean;
-}
-
-export interface QuestionCardProps
-  extends Pick<
-    StoreState,
-    | "loading"
-    | "gameOver"
-    | "number"
-    | "totalQuestions"
-    | "questions"
-    | "userAnswers"
-  > {
-  callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-export interface StartQuizProps
-  extends Pick<
-    StoreState,
-    | "loading"
-    | "setDifficulty"
-    | "difficulty"
-    | "gameOver"
-    | "userAnswers"
-    | "totalQuestions"
-    | "score"
-  > {
-  start: () => void;
-}
