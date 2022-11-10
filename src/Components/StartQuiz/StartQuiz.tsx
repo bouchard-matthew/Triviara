@@ -1,5 +1,20 @@
 import React from "react";
-import { StartQuizProps, Difficulty } from "../../Types/types";
+import { StoreState } from "../../Context/useAppStore";
+import { Difficulty } from "../../Types/types";
+
+interface StartQuizProps
+  extends Pick<
+    StoreState,
+    | "loading"
+    | "setDifficulty"
+    | "difficulty"
+    | "gameOver"
+    | "userAnswers"
+    | "totalQuestions"
+    | "score"
+  > {
+  start: () => void;
+}
 
 const StartQuiz = ({
   start,

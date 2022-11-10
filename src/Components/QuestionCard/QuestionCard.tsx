@@ -2,6 +2,19 @@ import React from "react";
 import { QuestionCardProps } from "../../Types/types";
 import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
 
+interface QuestionCardProps
+  extends Pick<
+    StoreState,
+    | "loading"
+    | "gameOver"
+    | "number"
+    | "totalQuestions"
+    | "questions"
+    | "userAnswers"
+  > {
+  callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
 const QuestionCard = ({
   callback,
   gameOver,
