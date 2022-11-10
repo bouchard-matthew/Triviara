@@ -1,5 +1,5 @@
 import React from "react";
-import { StoreState } from "../../Context/useAppStore";
+import { QuestionCardProps } from "../../Types/types";
 import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
 
 interface QuestionCardProps
