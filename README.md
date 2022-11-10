@@ -3,7 +3,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Triviara
-Triviara is a front end application designed to allow for users to answer random trivia questions ranging in difficulty from Easy, Medium, and Hard. This project is still in development; however, a stable version of the application is available at the following link: https://bouchard-matthew.github.io/Triviara/.
+Triviara is a front end application designed to allow for users to answer random trivia questions ranging in difficulty from Easy, Medium, and Hard. This project is still in development; however, a stable version of the application is available at the following link: https://bouchard-matthew.github.io/Triviara/. 
+
+Some planned features are expected to be implemented in the future including: 
+- Functionality for user to select custom number of trivia questions
+- Functionality for user to select categories of trivia questions
+- Access to history of results from past attempts
 
 ## Available Scripts
 
