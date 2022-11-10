@@ -1,4 +1,5 @@
 {
+  "homepage": "http://bouchard-matthew.github.io/Triviara",
   "name": "react-quiz",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "zustand": "^4.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage",
