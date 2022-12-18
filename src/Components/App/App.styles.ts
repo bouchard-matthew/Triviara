@@ -3,12 +3,13 @@ import BGImage from "../../Images/jakob_owens.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 html {
-    height: 100%;
+    height: 100vh;
+    background-image: url(${BGImage});
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body {
-    background-image: url(${BGImage});
-    background-size: cover;
     margin: 0;
     padding: 0 20px;
     display: flex;
@@ -42,8 +43,7 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline, Haettenschweiler, "Arial Narrow Bold",
-      sans-serif;
+    font-family: Fascinate Inline, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     background-image: linear-gradient(180deg, #fff, #87f1ff);
     background-size: 100%;
     background-clip: text;

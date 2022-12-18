@@ -35,7 +35,7 @@ const StartQuiz = ({
           return (
             <button
               className={
-                gameOver
+                gameOver || totalQuestions === userAnswers.length
                   ? difficulty == value
                     ? `selected-${value} difficulty-${value}`
                     : `difficulty-${value}`
@@ -44,7 +44,9 @@ const StartQuiz = ({
               onClick={() => setDifficulty(value)}
               key={idx}
               value={value}
-              disabled={!gameOver}
+              disabled={
+                !gameOver ? totalQuestions != userAnswers.length : false
+              }
             >
               {value}
             </button>
