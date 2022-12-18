@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Triviara/static/js/main.fef7a131.js",
+    "main.js": "/Triviara/static/js/main.1214aaee.js",
     "static/media/jakob_owens.jpg": "/Triviara/static/media/jakob_owens.8f7c50e53cff96ebc250.jpg",
     "index.html": "/Triviara/index.html",
-    "main.fef7a131.js.map": "/Triviara/static/js/main.fef7a131.js.map"
+    "main.1214aaee.js.map": "/Triviara/static/js/main.1214aaee.js.map"
   },
   "entrypoints": [
-    "static/js/main.fef7a131.js"
+    "static/js/main.1214aaee.js"
   ]
 }
