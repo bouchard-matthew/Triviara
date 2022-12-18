@@ -22,7 +22,6 @@ export type StoreState = {
 
 export const useStore = create<StoreState>((set) => ({
   // initial state
-  todos: [],
   loading: false,
   questions: [],
   totalQuestions: 10,
